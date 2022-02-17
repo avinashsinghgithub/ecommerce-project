@@ -45,3 +45,5 @@ testem.log
 .DS_Store
 Thumbs.db
 *.png
+//
+/03-frontend-with-html-table
