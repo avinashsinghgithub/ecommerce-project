@@ -85,7 +85,6 @@ export class ProductListComponent implements OnInit {
     this.productService.getProductListPaginate(this.thePageNumber-1, this.thePageSize, this.currentCategoryId).subscribe(this.processResult());
     
   }
-
   processResult(){
     return data => {
       this.products = data._embedded.products;
@@ -100,5 +99,9 @@ export class ProductListComponent implements OnInit {
     this.thePageSize = pageSize;
     this.thePageNumber = 1;
     this.listProducts();
+  }
+  
+  addToCart(theProduct : Product){
+    console.log(`adding to cart: ${theProduct.name}, ${theProduct.unitPrice}`);
   }
 }
